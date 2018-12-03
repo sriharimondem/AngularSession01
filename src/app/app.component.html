@@ -1,0 +1,35 @@
+<input [(ngModel)]='username'>
+<h1>{{username}}</h1>
+
+<table id='customers'>
+  <thead>
+    <tr>
+      <td>S.no</td>
+      <td>Name</td>
+      <td>Address</td>
+      <td>Username</td>
+      <td>Company</td>
+      <td>Phone</td>
+      <td>Email</td>
+      <td>Website</td>
+      <td>Zipcode</td>
+    </tr>
+  </thead>
+  <tbody *ngFor = "let data of httpData">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.address.city}}</td>
+      <td>{{data.username}}</td>
+      <td>{{data.company.name}}</td>
+      <td>{{data.phone}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.website}}</td>
+      <td>{{data.address.zipcode}}</td>
+  </tbody>
+</table>
+<app-events></app-events>
+<!--
+<ul *ngFor = "let data of httpData">
+    <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+</ul> -->
+

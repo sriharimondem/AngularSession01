@@ -1,0 +1,8 @@
+<div *ngFor='let hero of dataReader' style='text-align: left;margin-top: 90px;'>
+  <img [src]="hero.imageUrl" style='width: 8%;height: 8%;float: right;'>
+  <h1>{{hero.name}}</h1>
+  <h3>{{hero.sessions[0].name}}</h3>
+  <p>{{hero.sessions[0].level}}</p>
+  <p>{{hero.sessions[0].abstract}}</p>
+<hr>
+</div>
